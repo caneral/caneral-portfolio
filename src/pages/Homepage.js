@@ -1,5 +1,4 @@
 import React from "react";
-import { VFXProvider, VFXSpan } from "react-vfx";
 
 const Homepage = () => {
   return (
@@ -15,9 +14,7 @@ const Homepage = () => {
                 </p>
               </div>
               <p className="text-white md:text-5xl sm:text-3xl lg:text-7xl font-bold text-3xl">
-                <VFXProvider>
-                  <VFXSpan shader="rgbShift">CANER AL</VFXSpan>
-                </VFXProvider>
+                CANER AL
               </p>
             </div>
           </div>
