@@ -1,22 +1,15 @@
 import React from "react";
 import Typical from "react-typical";
-import {
-    AwesomeButtonProgress,
-} from 'react-awesome-button';
+import { AwesomeButtonProgress } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
-import cv from '../assets/cv/caneral_cv.pdf';
-import caneral from '../assets/IMG_7464.jpeg';
-
+import caneral from "../assets/IMG_7464.jpeg";
+import { VFXProvider, VFXSpan } from "react-vfx";
 const Homepage = () => {
-
-    const doSomethingThenCall = () => {
-        const link = document.createElement('a');
-        link.href = cv;
-        link.download = "Caner_Al_CV";
-        document.body.appendChild(link);
-        link.click();
-    }
-
+  const doSomethingThenCall = () => {
+    const mailto =
+      "mailto:caneral.js@gmail.com?subject=CV Request &body=I'm requesting a CV.";
+    window.location.href = mailto;
+  };
 
   return (
     <div className="flex min-h-screen p-14 z-30">
@@ -31,7 +24,9 @@ const Homepage = () => {
                 </p>
               </div>
               <p className="text-white md:text-5xl sm:text-3xl lg:text-7xl font-bold text-3xl">
-                CANER AL
+                <VFXProvider>
+                  <VFXSpan shader="rgbShift">CANER AL</VFXSpan>
+                </VFXProvider>
               </p>
               <p className="text-white md:text-3xl sm:text-xl lg:text-5xl font-bold">
                 <Typical
@@ -58,14 +53,18 @@ const Homepage = () => {
                     }, 1000);
                   }}
                 >
-                  Download CV
+                   CV Please 🧐
                 </AwesomeButtonProgress>
               </div>
             </div>
           </div>
           <div className="bg-green-500 relative md:row-span-3 sm:row-span-4 lg:row-span-1 xl:row-span-1 row-span-4">
-                        <img className="absolute h-full w-full object-cover" src={caneral} alt="caneral" />
-                    </div>
+            <img
+              className="absolute h-full w-full object-cover"
+              src={caneral}
+              alt="caneral"
+            />
+          </div>
         </div>
       </div>
     </div>
