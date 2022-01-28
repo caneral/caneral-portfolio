@@ -3,7 +3,6 @@ import Typical from "react-typical";
 import { AwesomeButtonProgress } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import caneral from "../assets/IMG_7464.jpeg";
-import { VFXProvider, VFXSpan } from "react-vfx";
 const Homepage = () => {
   const doSomethingThenCall = () => {
     const mailto =
@@ -24,9 +23,7 @@ const Homepage = () => {
                 </p>
               </div>
               <p className="text-white md:text-5xl sm:text-3xl lg:text-7xl font-bold text-3xl">
-                <VFXProvider>
-                  <VFXSpan shader="rgbShift">CANER AL</VFXSpan>
-                </VFXProvider>
+                CANER AL
               </p>
               <p className="text-white md:text-3xl sm:text-xl lg:text-5xl font-bold">
                 <Typical
